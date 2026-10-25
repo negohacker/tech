@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1220">
+  <meta name="description" content="Catálogo de softwares, drivers e links úteis para suporte técnico de TI.">
+  <title>Suporte Hacker — Kit de suporte TI</title>
+  <link rel="stylesheet" href="./assets/styles.css">
+  <script type="module" src="./assets/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="./" aria-label="Suporte Hacker, página inicial">
+        <span class="brand-mark" aria-hidden="true">SH</span>
+        <span><strong>Suporte Hacker</strong><small>Kit de suporte TI</small></span>
+      </a>
+      <nav class="primary-nav" aria-label="Navegação principal" id="nav">
+        <button type="button" data-tab="software" aria-selected="true">Softwares</button>
+        <button type="button" data-tab="drivers" aria-selected="false">Drivers</button>
+        <button type="button" data-tab="support" aria-selected="false">Links úteis</button>
+        <button type="button" data-tab="admin" aria-selected="false">Editor</button>
+      </nav>
+      <button class="icon-button" id="theme-toggle" type="button" aria-label="Alternar tema" title="Alternar tema"><span aria-hidden="true">◐</span></button>
+    </div>
+  </header>
+
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container hero-content">
+      <p class="eyebrow">CENTRAL DE FERRAMENTAS</p>
+      <h1 id="hero-title">Tudo para o seu <span>suporte técnico.</span></h1>
+      <p class="hero-copy">Softwares, drivers e atalhos úteis reunidos em um só lugar.</p>
+      <div class="search-wrap" id="tools">
+        <label class="search-box"><span aria-hidden="true">⌕</span><input id="q" type="search" placeholder="Pesquisar por nome ou descrição…" autocomplete="off" aria-label="Pesquisar no catálogo"><kbd> / </kbd></label>
+        <div class="chips" id="chips" aria-label="Filtrar por categoria"></div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container main-content" id="main">
+    <section id="v-software" aria-labelledby="software-title">
+      <div class="section-heading"><div><p class="eyebrow">CATÁLOGO</p><h2 id="software-title">Softwares <span class="count"></span></h2></div><p class="section-note">Ferramentas para produtividade, manutenção e segurança.</p></div>
+      <div class="grid"></div>
+    </section>
+    <section id="v-drivers" hidden aria-labelledby="drivers-title">
+      <div class="section-heading"><div><p class="eyebrow">DISPOSITIVOS</p><h2 id="drivers-title">Drivers <span class="count"></span></h2></div><p class="section-note">Priorize sempre os sites oficiais dos fabricantes.</p></div>
+      <div class="grid"></div>
+    </section>
+    <section id="v-admin" hidden aria-labelledby="admin-title">
+      <div class="section-heading"><div><p class="eyebrow">GERENCIAMENTO LOCAL</p><h2 id="admin-title">Editor do catálogo</h2></div></div>
+      <div class="notice"><strong>Como publicar alterações</strong><p>As alterações ficam neste navegador. Exporte o arquivo <code>data.json</code> e substitua o arquivo no repositório do GitHub para publicar a atualização.</p></div>
+      <div class="panel">
+        <div class="toolbar"><div class="segmented" id="subtabs" role="group" aria-label="Tipo de item"><button type="button" data-type="software" aria-pressed="true">Softwares</button><button type="button" data-type="drivers" aria-pressed="false">Drivers</button></div><div class="button-row"><button class="button button-quiet" id="f-reset" type="button">Descartar rascunho</button><button class="button button-primary" id="f-export" type="button">Exportar data.json</button></div></div>
+        <form class="form-grid" id="form">
+          <input type="hidden" id="f-id">
+          <div><label for="f-name">Nome</label><input id="f-name" required></div>
+          <div><label for="f-version">Versão</label><input id="f-version" required placeholder="Ex.: 1.2.3"></div>
+          <div><label for="f-image">URL da imagem (opcional)</label><input id="f-image" type="url" placeholder="https://…"></div>
+          <div><label for="f-category">Categoria</label><select id="f-category" required></select></div>
+          <div class="field-wide"><label for="f-description">Descrição</label><textarea id="f-description" required rows="3"></textarea></div>
+          <div><label for="f-link">Link de download / página</label><input id="f-link" type="url" required placeholder="https://…"></div>
+          <div><label for="f-badge">Selo</label><select id="f-badge"><option value="">Nenhum</option><option value="new">Novo</option><option value="popular">Popular</option><option value="free">Grátis</option><option value="critical">Atenção</option></select></div>
+          <div class="field-wide form-actions"><button class="button button-quiet" id="f-cancel" type="button">Limpar formulário</button><button class="button button-danger" id="f-delete" type="button" hidden>Excluir item</button><button class="button button-primary" type="submit">Salvar item</button></div>
+        </form>
+      </div>
+      <h3 class="subheading" id="admin-list-title">Itens cadastrados</h3><div class="grid" id="admin-grid"></div>
+    </section>
+
+    <section id="v-support" hidden aria-labelledby="support-title">
+      <div class="section-heading"><div><p class="eyebrow">ACESSO RÁPIDO</p><h2 id="support-title">Links úteis</h2></div><p class="section-note">Atalhos externos para rotinas de suporte e atendimento.</p></div>
+      <div class="support-grid">
+        <article class="panel link-panel"><div class="panel-icon">↗</div><h3>Menucheff</h3><ul class="link-list">
+          <li><a href="https://appdelivery.menucheff.com/gestor" target="_blank" rel="noopener noreferrer">Menucheff 1 — Gestor ↗</a></li>
+          <li><a href="https://appdelivery.menucheff.com/2673" target="_blank" rel="noopener noreferrer">Menucheff 1 — Cliente ↗</a></li>
+          <li><a href="https://menucheff.unitechsistemas.com.br/" target="_blank" rel="noopener noreferrer">Menucheff 2 — Gestor ↗</a></li>
+          <li><a href="https://app.menucheff.unitechsistemas.com.br/2673" target="_blank" rel="noopener noreferrer">Menucheff 2 — Cliente ↗</a></li>
+          <li><a href="https://cardapiodigital.menucheff.com/1m2673" target="_blank" rel="noopener noreferrer">Cardápio Mesa ↗</a></li>
+          <li><a href="https://cardapiodigital.menucheff.com/1c2673" target="_blank" rel="noopener noreferrer">Cardápio Cartão ↗</a></li>
+        </ul></article>
+        <article class="panel link-panel"><div class="panel-icon">▤</div><h3>Fiscal e notas</h3><ul class="link-list">
+          <li><a href="https://drive.google.com/drive/folders/1ZD4xogO-_DHWIvXlruXXaesXDzqvgyV9" target="_blank" rel="noopener noreferrer">Google Drive — arquivos ↗</a></li>
+          <li><a href="https://atendimento.tecnospeed.com.br/hc/pt-br/articles/4423079221143-Dicion%C3%A1rio-de-dados-NF-e" target="_blank" rel="noopener noreferrer">Guia de dados NF-e ↗</a></li>
+          <li><a href="https://www.sintegra.gov.br/" target="_blank" rel="noopener noreferrer">Sintegra ↗</a></li>
+          <li><a href="https://testeportas.com.br/" target="_blank" rel="noopener noreferrer">Teste de portas ↗</a></li>
+          <li><a href="https://www.fsist.com.br/" target="_blank" rel="noopener noreferrer">Baixar NF-e ↗</a></li>
+          <li><a href="https://www.nfe.fazenda.gov.br/portal/consultaRecaptcha.aspx?tipoConsulta=resumo&tipoConteudo=7PhJ+gAVw2g%3D%2F" target="_blank" rel="noopener noreferrer">Consultar NF-e ↗</a></li>
+          <li><a href="https://dfe-portal.svrs.rs.gov.br/" target="_blank" rel="noopener noreferrer">Portal DF-e ↗</a></li>
+        </ul></article>
+        <article class="panel link-panel"><div class="panel-icon">⌘</div><h3>Sistemas e gestores</h3><ul class="link-list">
+          <li><a href="https://app.unichatbot.com.br/" target="_blank" rel="noopener noreferrer">Unichatbot ↗</a></li>
+          <li><a href="https://appunidesk.unitechsistemas.com.br/dashboard" target="_blank" rel="noopener noreferrer">Gestor para celular ↗</a></li>
+          <li><a href="https://gestor.unitechsistemas.com/financeiro" target="_blank" rel="noopener noreferrer">Gestor financeiro ↗</a></li>
+          <li><a href="https://unidesk.unitechsistemas.com.br/inicio" target="_blank" rel="noopener noreferrer">Unidesk ↗</a></li>
+        </ul></article>
+        <article class="panel link-panel"><div class="panel-icon">✉</div><h3>Contato de suporte</h3><p class="muted">Configure os dados reais da sua equipe antes de publicar.</p><form id="support-form" class="contact-form"><label for="s-name">Nome</label><input id="s-name" required><label for="s-subject">Assunto</label><select id="s-subject" required><option value="">Selecione…</option><option>Dúvida sobre software</option><option>Problema com driver</option><option>Assuntos de conta</option><option>Outros</option></select><label for="s-msg">Mensagem</label><textarea id="s-msg" rows="3" required></textarea><button class="button button-primary" type="submit">Preparar e-mail</button></form><p class="muted tiny">Abre o aplicativo de e-mail padrão. O endereço configurado está no arquivo <code>assets/app.js</code>.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <div class="toasts" id="toasts" role="status" aria-live="polite"></div>
+  <footer class="site-footer"><div class="container footer-inner"><span>Suporte Hacker · Catálogo de ferramentas</span><span>© <span id="year"></span> · Site estático</span></div></footer>
+</body>
+</html>

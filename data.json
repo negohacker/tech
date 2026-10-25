@@ -1,0 +1,76 @@
+{
+  "software": [
+    {
+      "id": 6,
+      "name": "Image Resizer",
+      "version": "123",
+      "image": "",
+      "category": "utility",
+      "description": "Redimensionador de imagem.",
+      "link": "https://transfer.it/t/auHujE03SRpY",
+      "badge": "new"
+    },
+    {
+      "id": 12,
+      "name": "EaseUS Todo Backup Home",
+      "version": "2024 v16.3.1",
+      "image": "",
+      "category": "utility",
+      "description": "Software de backup de arquivos, pastas e dados.",
+      "link": "https://transfer.it/t/mTGqTI91FB7I",
+      "badge": "new"
+    },
+    {
+      "id": 13,
+      "name": "HiBit Uninstaller",
+      "version": "12",
+      "image": "",
+      "category": "security",
+      "description": "Utilitário para desinstalar programas e componentes indesejados.",
+      "link": "https://transfer.it/t/zEkJ6J9jTB6D",
+      "badge": "free"
+    }
+  ],
+  "drivers": [
+    {
+      "id": 1,
+      "name": "Driver de Vídeo NVIDIA",
+      "version": "536.99",
+      "image": "",
+      "category": "video",
+      "description": "Driver para placas de vídeo NVIDIA GeForce. Confira a versão e o modelo compatíveis no site oficial.",
+      "link": "https://www.nvidia.com/Download/index.aspx",
+      "badge": "critical"
+    },
+    {
+      "id": 2,
+      "name": "Driver Wireless Intel",
+      "version": "22.180.0.4",
+      "image": "",
+      "category": "network",
+      "description": "Drivers e atualizações para adaptadores de rede Intel Wi‑Fi.",
+      "link": "https://www.intel.com/content/www/us/en/download-center/home.html",
+      "badge": ""
+    },
+    {
+      "id": 3,
+      "name": "Bematech MP-2800 TH",
+      "version": "MP-2800 TH",
+      "image": "",
+      "category": "printer",
+      "description": "Página de suporte para localizar drivers e materiais da impressora Bematech.",
+      "link": "https://www.bematech.com.br/",
+      "badge": "new"
+    },
+    {
+      "id": 4,
+      "name": "Driver KP-IM602",
+      "version": "2024",
+      "image": "",
+      "category": "printer",
+      "description": "Localize o driver correto conforme o fabricante e o modelo do equipamento.",
+      "link": "https://www.google.com/search?q=driver+KP-IM602",
+      "badge": "new"
+    }
+  ]
+}
